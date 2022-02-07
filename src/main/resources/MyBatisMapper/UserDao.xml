@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hand.ssm.dao.UserDao">
+	<select id="selectById" parameterType="com.hand.ssm.dto.User" resultType="com.hand.ssm.dto.User">
+		select * from users where id = #{id}
+	</select>
+
+	<!-- select all -->
+	<resultMap id="UserResultMap"  type="com.hand.ssm.dto.User">
+		<id property="user_id" column="user_id" />
+		<result property="user_pwd" column="user_pwd" />
+		<result property="phone" column="phone" />
+		<result property="add_" column="add_" />
+		<result property="name_" column="name_" />
+		<result property="sex" column="sex" />
+		<result property="agreement" column="agreement" />
+	</resultMap>
+	
+	<resultMap id="UserResultMap2"  type="com.hand.ssm.dto.User">
+		<id property="id" column="id" />
+		<result property="pwd" column="pwd" />
+	</resultMap>
+    
+    <select id="selectByIdAndPwd" parameterType="com.hand.ssm.dto.User" resultMap="UserResultMap2">
+ 		select * from users
+ 		where user_id = #{user_id} and user_pwd = #{user_pwd}
+ 	</select>
+
+	<select id="getagrement" parameterType="com.hand.ssm.dto.User" resultMap="UserResultMap2">
+		select * from agreement
+	</select>
+
+	<select id="getaboutus" parameterType="com.hand.ssm.dto.User" resultMap="UserResultMap2">
+		select * from aboutus
+	</select>
+
+	<select id="getwechatimg" parameterType="com.hand.ssm.dto.User" resultMap="UserResultMap2">
+		select * from wechatimg
+	</select>
+
+ 	<select id="selectAll" resultMap="UserResultMap">
+		select * from users
+	</select>
+
+	<insert id="addUser" parameterType="com.hand.ssm.dto.User">
+		insert into	users(user_id,user_pwd,name_,phone,add_,sex)
+		values(#{user_id},#{user_pwd},#{name_},#{phone},#{add_},#{sex})
+	</insert>
+
+	<delete id="deleteById" parameterType="com.hand.ssm.dto.User" >
+		delete from users where user_id = #{user_id}
+	</delete>
+
+	<select id="selectByIdd" resultMap="UserResultMap">
+		select * from users where user_id = #{user_id}
+	</select>
+
+	<update id="updateUser" parameterType="com.hand.ssm.dto.User">
+		update users
+		set name_=#{name_},phone=#{phone},add_=#{add_},sex=#{sex}
+		where user_id = #{user_id}
+	</update>
+
+
+	<insert id="addAdvice" parameterType="com.hand.ssm.dto.Feedback">
+		insert into	feedback(name,sex,phone,email,address,advice)
+		values(#{name},#{sex},#{phone},#{email},#{address},#{advice})
+	</insert>
+</mapper>

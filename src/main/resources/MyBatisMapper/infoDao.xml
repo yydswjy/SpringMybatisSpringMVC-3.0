@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hand.ssm.dao.InfoDao">
+
+	<!-- select all -->
+	<resultMap id="infoResultMap"  type="com.hand.ssm.dto.Info">
+		<id property="loginid" column="loginid" />
+		<result property="userid" column="userid" />
+		<result property="username" column="username" />
+		<result property="loginip" column="loginip" />
+		<result property="logintime" column="logintime" />
+	</resultMap>
+
+
+ 	<select id="selectAll" resultMap="infoResultMap">
+		select * from loginlog
+	</select>
+
+	<select id="findAll" resultMap="infoResultMap">
+		select * from loginlog where username=#{username}
+	</select>
+
+	<insert id="addinfo" parameterType="com.hand.ssm.dto.Info">
+		insert into	loginlog(userid,username,loginip)
+		values(#{userid},#{username},#{loginip})
+	</insert>
+</mapper>

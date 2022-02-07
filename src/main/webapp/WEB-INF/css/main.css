@@ -1,0 +1,266 @@
+#middle{
+    padding-top: 200px;
+    padding-left: 300px;
+    font-family:Tahoma;
+}
+#middlep{
+    padding-top: 50px;
+    padding-left: 50px;
+
+}
+#middlen{
+    padding-top: 18px;
+}
+#footer{
+    position: static;
+    width: 100%;
+    height: 30px;
+    clear: both;
+    background-color:rgb(29, 29, 29);
+    bottom: 0;
+    
+}
+#footword{
+    color: #52575d;  
+    font-size: 20px;
+    text-align: center;
+}
+.photo img{
+    width: 940px;
+    height: 350px;
+    margin-top: 0px;
+    clear: both;
+}
+.img1{
+    display: block;
+}
+
+.img2{
+    display: none;
+}
+
+.img3{
+    display: none;
+}
+.img4{
+    display: none;
+}
+#middle_v{
+    top: 20%;
+    left: 384px;
+    position: absolute;
+    float: left;
+}
+
+#middle_w2{
+    font-family:Tahoma;
+    top: 170px;
+    position: absolute;
+    left: 1050px;
+    font-size: 15px;
+    color: rgb(163, 163, 163);
+}
+#title{
+    color: black;
+    font-size: 40px;
+    font-family:Tahoma;
+}
+#intro{
+    top: 60%;
+    left: 384px;
+    font-size: 15px;
+    color: rgb(163, 163, 163);
+    position: absolute;
+}
+#score{
+    font-size: 15px;
+    color: rgb(163, 163, 163);
+    position: inherit;
+}
+#serch{
+    position: absolute;
+    top: 340px;
+    left: 700px;
+    font-size: 40px;
+}
+.input{
+    display: block;
+    width: 500px;
+    height: 60px;
+    font-size: 50px;
+}
+#middle3{
+    padding-top: 200px;
+    font-family:Tahoma;
+}
+
+
+#middlerightr31{
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    margin-top: 120px;
+    margin-left: 600px; 
+}
+
+#middlerightr32 input{
+    position: absolute;
+    width: 400px;
+    height: 35px;
+}
+#middlerightr41{
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    margin-top: 220px;
+    margin-left: 600px;
+}
+#middlerightr42 select{
+    width: 410px;
+    height: 40px;
+    position: absolute;
+    background-color: #fff;
+}
+#middlerightr51{
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    margin-top: 320px;
+    margin-left: 600px;
+}
+#middlerightr52 input{
+    position: absolute;
+    width: 400px;
+    height: 35px;
+}
+#middlerightr61{
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    margin-top: 420px;
+    margin-left: 600px;
+}
+#middlerightr62 select{
+    position: absolute;
+    width: 410px;
+    height: 40px;
+    background-color: #fff;
+}
+
+#middlerightr8 {
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    margin-top: 600px;
+    margin-left: 700px;
+    padding-left: 20px;
+}
+#middlerightr8 a{
+    display: block;
+    position: absolute;
+    width: 70px;
+    height: 28px;
+    range: auto;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-align: center;
+    padding-top:2px;
+}
+#middlerightr9 {
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    margin-top: 600px;
+    margin-left: 900px;
+    padding-left: 20px;
+}
+#middlerightr9 a{
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 28px;
+    range: auto;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-align: center;
+    padding-top: 2px;
+}
+
+#he{
+    background-color:rgb(163, 163, 163);
+    width: 600px;
+    height: 30px;
+    align:center;
+}
+
+#window{
+    width: 700px; 
+    height: 220px;
+    background-image: url(../../../../../../../大三上/Web程序设计/游戏商场/img/list_back.png);
+    background-size: 700px;
+    opacity:0.9;
+}
+#canso{
+    position: relative;
+    top: 93px;
+    left: -300px;
+}
+#window_p{
+    margin-left: 100px;
+    margin-top: 15px;
+}
+#price{
+    margin-left: 400px;
+    margin-top: 90px;
+    position: absolute;
+}
+#taigu{
+    position: absolute;
+    display: none;
+    z-index: 99;
+    left: 500px;   
+}
+#buy{
+    position: absolute;
+    margin-top: 200px;
+    left: 500px;
+}
+#aboutus{
+    position:absolute;
+    left: 350px;
+    margin-top:60px;
+}
+#under{
+        position: absolute;
+        bottom: -1850px;  
+        z-index: -1;      
+}
+#changeus{
+    position: absolute;
+    top:310px;
+    left: 760px;
+}
+#wechats{
+    display: none;
+}
+#zfbs{
+    display: none;
+}
+#beingpay{
+    margin-top: 30px;
+    display: none;
+    color: #52575d; 
+}
+#window2{
+    width: 700px; 
+    height: 220px;
+    background-image: url(../../../../../../../大三上/Web程序设计/游戏商场/img/list_back2.png);
+    background-size: 700px;
+    opacity:0.9;
+}
+#adv{
+    position:relative;
+}
+

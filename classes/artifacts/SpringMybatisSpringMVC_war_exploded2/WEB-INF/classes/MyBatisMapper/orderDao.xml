@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hand.ssm.dao.orderDao">
+	<!-- select all -->
+	<resultMap id="orderResultMap"  type="com.hand.ssm.dto.order_">
+		<result property="order_id" column="order_id" />
+		<result property="user_id" column="user_id" />
+		<result property="num" column="num" />
+		<result property="color" column="color" />
+		<result property="type" column="type" />
+		<result property="time" column="time" />
+	</resultMap>
+
+
+	<insert id="addorder" parameterType="com.hand.ssm.dto.order_">
+		insert into	order_(user_id,num,type,color,time)
+		values(#{user_id},#{num},#{type},#{color},#{time})
+	</insert>
+
+	<select id="getorderAll" resultMap="orderResultMap">
+		select * from order_
+	</select>
+
+	<delete id="deleorderbyid" parameterType="com.hand.ssm.dto.order_" >
+		delete from order_ where order_id = #{id}
+	</delete>
+</mapper>
+

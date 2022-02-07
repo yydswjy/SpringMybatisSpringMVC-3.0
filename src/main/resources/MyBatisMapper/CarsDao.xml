@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hand.ssm.dao.CarsDao">
+	<!-- select all -->
+	<select id="getCarByPrimaryKey" parameterType="com.hand.ssm.dto.Car" resultType="com.hand.ssm.dto.Car">
+		select * from car where carid = #{carid}
+		<!-- select * from goods -->
+	</select>
+
+	<resultMap id="carResultMap"  type="com.hand.ssm.dto.Car">
+		<id property="carid" column="carid" />
+		<result property="number" column="number" />
+		<result property="type" column="type" />
+		<result property="brand" column="brand" />
+		<result property="color" column="color" />
+		<result property="price" column="price" />
+		<result property="rentprice" column="rentprice" />
+		<result property="deposit" column="deposit" />
+		<result property="isrenting" column="isrenting" />
+		<result property="img" column="img" />
+		<result property="description" column="description" />
+
+	</resultMap>
+
+	<insert id="addcars" parameterType="com.hand.ssm.dto.Car">
+		insert into	car(number,type,brand,color,price,rentprice,deposit,isrenting,img,description)
+		values(#{number},#{type},#{brand},#{color},#{price},#{rentprice},#{deposit},#{isrenting},#{img},#{description})
+	</insert>
+
+	<select id="getcarsAll" resultMap="carResultMap">
+		select * from car
+	</select>
+
+	<select id="getcarsbytypeAll" resultMap="carResultMap">
+		select * from car where type like CONCAT('%',#{type},'%')
+	</select>
+
+	<select id="getcarsbybrandAll" resultMap="carResultMap">
+		select * from car where brand like CONCAT('%',#{brand},'%')
+	</select>
+
+	<delete id="delecarbyid" parameterType="com.hand.ssm.dto.Car" >
+		delete from car where carid = #{carid}
+	</delete>
+
+	<select id="getcarById" parameterType="com.hand.ssm.dto.Car" resultType="com.hand.ssm.dto.Car">
+		select * from car where carid = #{carid}
+	</select>
+
+	<select id="selectcar" parameterType="com.hand.ssm.dto.Car" resultType="com.hand.ssm.dto.Car">
+		select * from car limit 0,4
+	</select>
+
+	<select id="getcarsbyrentpriceAll" parameterType="com.hand.ssm.dto.Car" resultType="com.hand.ssm.dto.Car">
+		select * from car
+		order by rentprice desc
+	</select>
+
+	<update id="updateCarById" parameterType="com.hand.ssm.dto.Car">
+		update car
+		set number=#{number},
+		    type=#{type},
+		    brand=#{brand},
+			color=#{color},
+			price=#{price},
+			rentprice=#{rentprice},
+			deposit=#{deposit},
+			isrenting=#{isrenting},
+			img=#{img},
+			description=#{description}
+		where carid=#{carid}
+	</update>
+
+</mapper>
+
